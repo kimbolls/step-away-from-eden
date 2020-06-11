@@ -62,5 +62,8 @@ public class movement : MonoBehaviour
                 playerposition.position = nextpoint;
             }
         }
+
+
+        //test test test
     }
 }

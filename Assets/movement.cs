@@ -28,42 +28,60 @@ public class movement : MonoBehaviour
     {
         if(Input.GetKeyDown("d"))
         {
-            if(i != 3 && i != 7 && i != 11 && i != 15)
+            GoRight();
+        }
+        if(Input.GetKeyDown("a"))
+        {
+           GoLeft();
+        }
+        if(Input.GetKeyDown("w"))
+        {
+            GoUp();
+        }
+        if(Input.GetKeyDown("s"))
+        {
+            GoDown();
+        }
+
+    }
+
+    void GoRight()
+    {
+        if(i != 3 && i != 7 && i != 11 && i != 15)
             {
                 i += 1;
                 nextpoint = gametile.values[i].transform.position;
                 playerposition.position = nextpoint;
             }
-        }
-        if(Input.GetKeyDown("a"))
-        {
-            if(i != 0 && i != 4 && i != 8 && i != 12)
+    }
+
+    void GoLeft()
+    {
+         if(i != 0 && i != 4 && i != 8 && i != 12)
             {
                 i -= 1;
                 nextpoint = gametile.values[i].transform.position;
                 playerposition.position = nextpoint;
             }
-        }
-        if(Input.GetKeyDown("w"))
-        {
-            if(i != 0 && i != 1 && i != 2 && i != 3)
-            {
-                i -= 4;
-                nextpoint = gametile.values[i].transform.position;
-                playerposition.position = nextpoint;
-            }
-        }
-        if(Input.GetKeyDown("s"))
-        {
-            if(i != 12 && i != 13 && i != 14 && i != 15)
+    }
+
+    void GoDown()
+    {
+        if(i != 12 && i != 13 && i != 14 && i != 15)
             {
                 i += 4;
                 nextpoint = gametile.values[i].transform.position;
                 playerposition.position = nextpoint;
             }
-        }
+    }
 
-
-        //test test test
+    void GoUp()
+    {
+        if(i != 0 && i != 1 && i != 2 && i != 3)
+            {
+                i -= 4;
+                nextpoint = gametile.values[i].transform.position;
+                playerposition.position = nextpoint;
+            }
     }
 }

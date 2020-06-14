@@ -32,7 +32,7 @@ public class movement : MonoBehaviour
         }
         if(Input.GetKeyDown("a"))
         {
-           GoLeft();
+            GoLeft();
         }
         if(Input.GetKeyDown("w"))
         {
@@ -44,6 +44,10 @@ public class movement : MonoBehaviour
         }
 
     }
+
+    
+
+
 
     void GoRight()
     {
